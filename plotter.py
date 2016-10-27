@@ -11,14 +11,13 @@ with open('scala.csv', 'r') as infile:
 
 
 # the histogram of the data
-n, bins, patches = plt.hist(cpp, 50, normed=1, facecolor='green', alpha=0.75)
-n, bins, patches = plt.hist(scala, 50, normed=1, facecolor='red', alpha=0.75)
+cn, cbins, cpatches = plt.hist(cpp, 5, normed=1, facecolor='green', alpha=0.75)
+sn, sbins, spatches = plt.hist(scala, 5, normed=1, facecolor='red', alpha=0.75)
 
 # add a 'best fit' line
-plt.xlabel('Time')
+plt.xlabel('Time (Green = C++, Red = Scala)')
 plt.ylabel('Frequency')
-plt.title(r'Comparison of scala and CPP')
-#plt.axis([40, 160, 0, 0.03])
+plt.title(r'Comparison of Scala and C++')
 plt.grid(True)
 
 plt.show()
